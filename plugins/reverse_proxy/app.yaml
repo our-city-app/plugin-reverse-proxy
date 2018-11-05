@@ -1,0 +1,4 @@
+handlers:
+- url: /proxy/?.*
+  script: main_unauthenticated.app
+  secure: always
