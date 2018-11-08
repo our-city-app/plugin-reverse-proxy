@@ -56,7 +56,7 @@ class ReverseProxyHandler(webapp2.RequestHandler):
             query_params = urllib.urlencode(request.GET)
             if query_params:
                 url = '%s?%s' % (url, query_params)
-            result = urlfetch.fetch(url, request.body, request.method, headers, deadline=30)
+            result = urlfetch.fetch(url, request.body, request.method, headers, deadline=30, follow_redirects=False)
             status_code, content, headers = result.status_code, result.content, result.headers
         except urlfetch.DeadlineExceededError:
             # Took more than 30 seconds
