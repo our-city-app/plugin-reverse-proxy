@@ -41,5 +41,5 @@ def run():
     ProxyPath(key=ProxyPath.create_key('test'), url='https://2bfb58ed.eu.ngrok.io').put()
 ```
  
-Going to https://your-app-id.appspot.com/test/abc will proxy to https://2bfb58ed.eu.ngrok.io/abc
+Going to https://your-app-id.appspot.com/proxy/test/abc will proxy to https://2bfb58ed.eu.ngrok.io/abc
 
